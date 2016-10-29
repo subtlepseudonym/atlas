@@ -1,0 +1,7 @@
+[
+	{
+		"endpoint": "/",
+		"method": "GET",
+		"help": "Returns this JSON, later will produces swagger doc"
+	}
+]
