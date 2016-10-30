@@ -1,14 +1,17 @@
-/* Map Generator
- * subtlepseudonym
+/* Map Generation Service
+ * subtlepseudonym (subtlepseudonym@gmail.com)
  */
 
 package main
 
 import (
+ 	"atlas/atlas"
+
 	"bytes"
 	"errors"
 	"io"
 	"log"
+	"math/rand"
 	"net/http"
 	"os"
 	"os/exec"
@@ -55,6 +58,8 @@ func getIP() (string, error) {
 }
 
 func init() {
+	rand.Seed(6)
+
 	// Enable logging to local file
 	log.SetOutput(os.Stdout)
 
@@ -65,6 +70,8 @@ func init() {
 }
 
 func main() {
+	atlas.AtlasTest()
+
 	http.HandleFunc("/", indexHandler)
 
 	log.Fatal(http.ListenAndServe(lasPort, nil))
