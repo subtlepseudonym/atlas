@@ -9,7 +9,9 @@ This repo provides an intranetwork (my home network) REST service for use with <
 
 #### Project Files ####
 
-+ atlas.go
++ main/main.go
 	- On startup, prints the intranetwork ip and port that it's listening on
-	- TODO: Map generation
 	- TODO: swagger for API endpoints (and update of /)
++ atlas/atlas.go
+	- First attempt at plate tectonics style map generation
+	- TODO: group higher resolution, non-gaussian map into plates
